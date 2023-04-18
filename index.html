@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Credit Oracle</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="./web3.min.js"></script>
+    <script src="./snarkjs.min.js"></script>
+    <!-- <script src="./node_modules/crypto-browserify/example/bundle.js"></script> -->
+    <script src="https://peterolson.github.io/BigInteger.js/BigInteger.min.js"></script>
+    <script src="./src/mimc.js"></script>
+    <script src="./src/sparse_merkle_tree.js"></script>
+    <script src="./src/compute_spend_inputs.js"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"></script>
+    
+    
+    <!--<script src="crypto"></script>
+    <script src="fs"></script>
+    <script src="assert"></script>
+    <script src="web3-utils"></script>
+    <script src="web3"></script>
+    <script src="circomlib"></script>
+    <script src="assert"></script>
+     -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <style>
+      .center {
+        text-align: center;
+      }
+      </style>
+  </head>
+  <body>
+
+    <div id="header">
+      <header>
+        <div id="sub-title-container">
+          <h1 id="title"></h1>
+        </div>
+        
+      </div>
+      <h2>Withdraw :</h2>
+      <label for="note">Your code: </label>
+      <input id="note" type="text"/>
+     
+      <button id="withdraw">Withdraw</button>
+       
+      </header>
+    <div class="panel panel_right">
+      <h2>My Account</h2>
+      <select id="myaccount" class="account"></select>
+    </div>
+    <div id="main">
+      <div id="main-display">
+        <article>
+          <h2>Deposit :</h2>
+          <div id="request-control">
+            <label for="amount-of-account">amount:</label>
+            <input id="amount-of-account" type="text"/>
+            <label for="balance-of-account">balance:</label>
+            <input id="balance-of-account" type="text"/>
+            <label for="liquidition-of-account">liquidition:</label>
+            <input id="liquidition-of-account" type="text"/>
+            <label for="op1-of-account">op1:</label>
+            <input id="op1-of-account" type="text"/>
+            <label for="op2-of-account">op2:</label>
+            <input id="op2-of-account" type="text"/>
+            <label for="op3-of-account">op3:</label>
+            <input id="op3-of-account" type="text"/>
+            <div id="resquest-control-buttons">
+              <button id="request-rank"></button>
+            </div>
+            <div class="popup">
+              <label for="give-code">Give code:</label>
+              <p id = "give-code"></p>
+              <button type="button">OK</button>
+            </div>
+          </div>
+          
+        </article>
+        <pre id="log"></pre>
+      </div>
+      
+
+    </div>
+    <script src="./CreditOracle.js"></script>
+  </body>
+</html>
